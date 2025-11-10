@@ -28,7 +28,7 @@ def get_wikipedia_summary(topic):
         # Extract title
         title = soup.find("h1").get_text(strip=True)
 
-        # Extract a meaningful summary paragraph
+        # summary paragraph
         paragraphs = soup.select("p")
         summary = None
 
@@ -48,7 +48,7 @@ def get_wikipedia_summary(topic):
 
 
 
-# ✅ API route for React frontend
+# API route for React frontend
 @app.route('/api/scrape', methods=['POST'])
 def scrape():
     data = request.get_json()
