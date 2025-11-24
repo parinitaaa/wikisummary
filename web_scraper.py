@@ -17,7 +17,6 @@ def get_wikipedia_summary(topic):
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                           "AppleWebKit/537.36 (KHTML, like Gecko) "
                           "Chrome/120.0.0.0 Safari/537.36",
-            "From": "your_email@example.com"
         }
 
         response = requests.get(url, headers=headers)
@@ -28,7 +27,7 @@ def get_wikipedia_summary(topic):
         # Extract title
         title = soup.find("h1").get_text(strip=True)
 
-        # summary paragraph
+       #  summary paragraph
         paragraphs = soup.select("p")
         summary = None
 
